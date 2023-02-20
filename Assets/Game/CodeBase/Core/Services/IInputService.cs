@@ -9,8 +9,5 @@ namespace Game.CodeBase.Core.Services
         event Action OnFire;
         event Action OnRotateLeft;
         event Action OnRotateRight;
-        
-        float GetMouseHorizontalInput();
-        float GetMouseVerticalInput();
     }
 }

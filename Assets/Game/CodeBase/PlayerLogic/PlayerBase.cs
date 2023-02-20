@@ -6,8 +6,7 @@ namespace Game.CodeBase.PlayerLogic
     public class PlayerBase : MonoBehaviour
     {
         [SerializeField] private PlayerMovementSettings _playerMovementSettings;
-        [SerializeField] private CameraMovement _cameraMovement;
-
+       
         private PlayerMovement _playerMovement;
         private IInputService _inputService;
         
@@ -15,8 +14,7 @@ namespace Game.CodeBase.PlayerLogic
         {
             _inputService = FindObjectOfType<UnityEngineInputService>();
             _playerMovement = new PlayerMovement(_playerMovementSettings, transform);
-            _cameraMovement.Construct(_inputService);
-
+            
             _inputService.OnGunSwitch += SwitchGun;
             _inputService.OnFire += Fire;
             _inputService.OnGunReload += ReloadGun;
