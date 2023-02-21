@@ -8,10 +8,13 @@ namespace Game.CodeBase.Weapon.Models
     {
         [SerializeField] private BulletFactory _bulletFactory;
 
-        public override void Shoot(Vector3 startPosition, Vector3 direction)
+        public override void Shoot(int bulletCount, Vector3 startPosition, Vector3 direction)
         {
-            var bullet = _bulletFactory.CreateBullet(startPosition, direction);
-            bullet.MoveForward();
+            for (int i = 0; i < bulletCount; i++)
+            {
+                var bullet = _bulletFactory.CreateBullet( startPosition, direction);
+                bullet.MoveForward();   
+            }
         }
     }
 }

@@ -23,9 +23,10 @@ namespace Game.CodeBase.UI
          UpdateAmmoInfo(gunView);
       }
 
-      private void OnDestroy()
+      public void DeInitialize()
       {
          _health.OnCurrentHealthChange -= UpdateHealthInfo;
+         _gunView.OnGunInfoChange -= UpdateAmmoInfo;
       }
 
       private void UpdateHealthInfo()

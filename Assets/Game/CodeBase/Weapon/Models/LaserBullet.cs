@@ -9,13 +9,13 @@ namespace Game.CodeBase.Weapon.Models
         [SerializeField] private float _lasetDistance;
         private RaycastHit _hit;
 
-        public override void Shoot(Vector3 startPosition, Vector3 direction)
+        public override void Shoot(int bulletCount, Vector3 startPosition, Vector3 direction)
         {
             if (Physics.Raycast(startPosition, direction, out _hit, _lasetDistance))
             {
                 if (_hit.collider.TryGetComponent(out IDamageable damageable))
                 {
-                    damageable.TakeDamage(_damage);
+                    damageable.TakeDamage(bulletCount);
                 }
             }
         }

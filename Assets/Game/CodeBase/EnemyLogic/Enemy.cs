@@ -14,11 +14,11 @@ namespace Game.CodeBase.EnemyLogic
 
         public event Action<Enemy> OnReclaim;
         
-        public void Construct(Transform target, float speed)
+        public void Construct(Transform target, EnemySettings settings)
         {
             _target = target;
-            _speed = speed;
-            _damage = 1;
+            _speed = settings.EnemySpeed;
+            _damage = settings.Damage;
         }
 
         private void Update()
