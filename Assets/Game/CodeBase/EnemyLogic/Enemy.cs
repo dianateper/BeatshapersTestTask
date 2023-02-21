@@ -1,5 +1,4 @@
 ﻿using Game.CodeBase.Common;
-using Game.CodeBase.PlayerLogic;
 using Game.CodeBase.Weapon.Bullets;
 using UnityEngine;
 
@@ -10,12 +9,14 @@ namespace Game.CodeBase.EnemyLogic
         private Transform _target;
         private Vector3 _direction;
         private float _speed;
+        private float _damage;
         private EnemyFactory _enemyFactory;
 
         public void Construct(Transform target, float speed, EnemyFactory enemyFactory)
         {
             _target = target;
             _speed = speed;
+            _damage = 1;
             _enemyFactory = enemyFactory;
         }
 
@@ -36,9 +37,10 @@ namespace Game.CodeBase.EnemyLogic
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out IPlayer _))
+            if (other.TryGetComponent(out IDamageable damageable))
             {
                 _enemyFactory.Reclaim(this);   
+                damageable.TakeDamage(_damage);
             }
         }
 

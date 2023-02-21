@@ -7,10 +7,10 @@ namespace Game.CodeBase.PlayerLogic
         private readonly Transform _transform;
         private readonly float _rotationSpeed;
 
-        public PlayerMovement(PlayerMovementSettings playerMovementSettings, Transform transform)
+        public PlayerMovement(PlayerSettings playerSettings, Transform transform)
         {
             _transform = transform;
-            _rotationSpeed = playerMovementSettings.RotationSpeed;
+            _rotationSpeed = playerSettings.RotationSpeed;
         }
 
         public void RotateLeft() =>

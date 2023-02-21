@@ -382,6 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMovementSettings:
     _rotationSpeed: 20
+  _maxHealth: 10
 --- !u!135 &811403790
 SphereCollider:
   m_ObjectHideFlags: 0
