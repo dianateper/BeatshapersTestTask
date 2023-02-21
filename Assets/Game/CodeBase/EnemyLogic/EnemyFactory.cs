@@ -1,5 +1,4 @@
-﻿using System;
-using Game.CodeBase.Common;
+﻿using Game.CodeBase.Common;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -27,7 +26,7 @@ namespace Game.CodeBase.EnemyLogic
 
             enemy.transform.SetPositionAndRotation(GetRandomPosition(_enemySettings.EnemySpawnRadius),
                 Quaternion.identity);
-            enemy.Construct(target, _enemySettings.EnemySpeed);   
+            enemy.Construct(target, _enemySettings.EnemySpeed, this);   
             return enemy;
         }
 
@@ -39,18 +38,8 @@ namespace Game.CodeBase.EnemyLogic
         private Vector3 GetRandomPosition(float radius)
         {
             var position = Random.onUnitSphere * radius;
-            position.y = 0;
+            position.y = -1;
             return position;
         }
-    }
-
-    [Serializable]
-    public class EnemySettings
-    {
-        [SerializeField] private float _enemySpawnRadius;
-        [SerializeField] private float _enemySpeed;
-        
-        public float EnemySpawnRadius => _enemySpawnRadius;
-        public float EnemySpeed => _enemySpeed;
     }
 }
