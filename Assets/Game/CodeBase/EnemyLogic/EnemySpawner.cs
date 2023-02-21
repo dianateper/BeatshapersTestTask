@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using Game.CodeBase.PlayerLogic;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.CodeBase.EnemyLogic
@@ -11,33 +11,45 @@ namespace Game.CodeBase.EnemyLogic
 
         private Transform _target;
         private WaitForSeconds _spawnDelay;
+        private List<Enemy> _activeEnemies;
+        
         private bool _isSpawning;
 
-        private void Start()
+        public void Construct(Transform playerBaseTransform)
         {
-            _target = FindObjectOfType<PlayerBase>().transform;
+            _activeEnemies = new List<Enemy>();
+            _target = playerBaseTransform;
             _spawnDelay = new WaitForSeconds(_spawnDelayInSeconds);
-            StartSpawning();
         }
 
-        private void StartSpawning()
+        public void StartSpawning()
         {
             _isSpawning = true;
             StartCoroutine(CreateEnemy());
         }
 
-        private void StopSpawning()
+        public void StopSpawning()
         {
             StopCoroutine(CreateEnemy());
+            _enemyFactory.ReclaimAll(_activeEnemies);
+            _isSpawning = false;
         }
 
         private IEnumerator CreateEnemy()
         {
             while (_isSpawning)
             {
-                _enemyFactory.CreateEnemy(_target);
+                var enemy = _enemyFactory.CreateEnemy(_target);
+                _activeEnemies.Add(enemy);
+                enemy.OnReclaim += Reclaim;
                 yield return _spawnDelay;
             }
+        }
+
+        private void Reclaim(Enemy enemy)
+        {
+            _activeEnemies.Remove(enemy);
+            _enemyFactory.Reclaim(enemy);
         }
     }
 }

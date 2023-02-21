@@ -6,25 +6,27 @@ namespace Game.CodeBase.PlayerLogic
 {
     public class PlayerHealth : MonoBehaviour, IHealth
     {
+        private float _currentHealth;
         public float MaxHealth { get; set; }
-        public float CurrentHealth { get; set; }
-        public event Action<float> OnCurrentHealthChange;
+        public float CurrentHealth => _currentHealth;
+        public event Action OnCurrentHealthChange;
         public event Action OnDie;
-
-        public void Construct(PlayerSettings playerSettings)
+        
+        public void ResetHealth(float maxHealth)
         {
-            MaxHealth = playerSettings.MaxHealth;
-            CurrentHealth = MaxHealth;
+            _currentHealth = maxHealth;
+            MaxHealth = maxHealth;
+            OnCurrentHealthChange?.Invoke();
         }
-
+        
         public void TakeDamage(float damage)
         {
-            CurrentHealth -= damage;
-            OnCurrentHealthChange?.Invoke(CurrentHealth);
+            _currentHealth -= damage;
+            OnCurrentHealthChange?.Invoke();
             if (CurrentHealth <= 0)
             {
                 OnDie?.Invoke();
-                CurrentHealth = 0;
+                _currentHealth = 0;
             }
         }
     }

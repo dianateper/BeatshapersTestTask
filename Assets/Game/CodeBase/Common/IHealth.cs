@@ -4,11 +4,12 @@ namespace Game.CodeBase.Common
 {
     public interface IHealth : IDamageable
     {
-        float MaxHealth { get; set; }
         float CurrentHealth { get; }
 
-        event Action<float> OnCurrentHealthChange;
+        event Action OnCurrentHealthChange;
 
         event Action OnDie;
+
+        void ResetHealth(float maxHealth);
     }
 }

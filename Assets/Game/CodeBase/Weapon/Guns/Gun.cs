@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Game.CodeBase.Weapon.Models;
 using UnityEngine;
 
@@ -9,15 +10,29 @@ namespace Game.CodeBase.Weapon.Guns
       [SerializeField] private List<GunModel> _guns;
       [SerializeField] private GunModel _currentGun;
       [SerializeField] private Transform _shootPosition;
-      [SerializeField] private GunView _gunView;
+      [SerializeField] private GunRenderer _gunRenderer;
       
       private int _currentGunIndex;
-      
-      private void Start()
+      public int CurrentAmmo => _currentGun.CurrentAmmo;
+      public event Action<IGunView> OnGunInfoChange;
+
+      public void Initialize()
       {
-         foreach (var gun in _guns) 
+         foreach (var gun in _guns)
+         {
+            gun.OnGunInfoChange += UpdateGunInfo;
             gun.Construct(this);
+         }
+
          _currentGun = _guns[0];
+      }
+
+      private void OnDestroy()
+      {
+         foreach (var gun in _guns)
+         {
+            gun.OnGunInfoChange -= UpdateGunInfo;
+         }
       }
 
       public void Shoot(Vector3 direction) => 
@@ -25,13 +40,16 @@ namespace Game.CodeBase.Weapon.Guns
 
       public void Reload() => 
          _currentGun.ReloadAmmo();
-      
+
       public void ChangeGun()
       {
          _currentGun.StopReloading();
          _currentGunIndex = (_currentGunIndex + 1) % _guns.Count;
          _currentGun = _guns[_currentGunIndex];
-         _gunView.ChangeSprite(_currentGun);
+         _gunRenderer.ChangeSprite(_currentGun);
+         UpdateGunInfo();
       }
+
+      private void UpdateGunInfo() => OnGunInfoChange?.Invoke(this);
    }
 }

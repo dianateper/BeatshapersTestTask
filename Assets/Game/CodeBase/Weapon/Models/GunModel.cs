@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Game.CodeBase.Weapon.Models
@@ -26,17 +27,25 @@ namespace Game.CodeBase.Weapon.Models
         private MonoBehaviour _monoBehaviour;
         private WaitForSeconds _coolDownDelay;
         private WaitForSeconds _reloadDelay;
-
+        
         public Sprite Sprite => _gunSprite;
-
-        private void OnEnable()
+        
+        public int CurrentAmmo
         {
-            _currentAmmo = _maxAmmo;
-            _canShoot = true;
+            get => _currentAmmo;
+            private set
+            {
+                _currentAmmo = value;
+                OnGunInfoChange?.Invoke();
+            }
         }
+
+        public event Action OnGunInfoChange;
 
         public void Construct(MonoBehaviour monoBehaviour)
         {
+            CurrentAmmo = _maxAmmo;
+            _canShoot = true;
             _monoBehaviour = monoBehaviour;
             _coolDownDelay = new WaitForSeconds(_coolDownTime);
             _reloadDelay = new WaitForSeconds(_reloadTime);
@@ -48,7 +57,7 @@ namespace Game.CodeBase.Weapon.Models
             {
                 _canShoot = false;
                 bulletModel.Shoot(startPosition, direction);
-                _currentAmmo -= _ammoPerShoot;
+                CurrentAmmo -= _ammoPerShoot;
                 _monoBehaviour.StartCoroutine(StartCoolDownCoroutine());
             }
         }
@@ -61,8 +70,8 @@ namespace Game.CodeBase.Weapon.Models
 
         private IEnumerator ReloadAmmoCoroutine()
         {
-            _currentAmmo = _maxAmmo;
             yield return _reloadDelay;
+            CurrentAmmo = _maxAmmo;
             _canShoot = true;
         }
 

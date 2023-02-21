@@ -1,4 +1,5 @@
-﻿using Game.CodeBase.Common;
+﻿using System.Collections.Generic;
+using Game.CodeBase.Common;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -26,7 +27,7 @@ namespace Game.CodeBase.EnemyLogic
 
             enemy.transform.SetPositionAndRotation(GetRandomPosition(_enemySettings.EnemySpawnRadius),
                 Quaternion.identity);
-            enemy.Construct(target, _enemySettings.EnemySpeed, this);   
+            enemy.Construct(target, _enemySettings.EnemySpeed);   
             return enemy;
         }
 
@@ -40,6 +41,14 @@ namespace Game.CodeBase.EnemyLogic
             var position = Random.onUnitSphere * radius;
             position.y = -1;
             return position;
+        }
+
+        public void ReclaimAll(List<Enemy> activeEnemies)
+        {
+            foreach (var enemy in activeEnemies)
+            {
+                Reclaim(enemy);
+            }
         }
     }
 }
