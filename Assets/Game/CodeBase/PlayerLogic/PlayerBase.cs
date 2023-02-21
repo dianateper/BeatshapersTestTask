@@ -17,15 +17,31 @@ namespace Game.CodeBase.PlayerLogic
         public IInputService InputService { get; set; }
         public IHealth PlayerHealth => _playerHealth;
         public IGun Gun => _gun;
-      
-        private void Awake()
+        
+        public void Initialize()
+        {
+            _playerHealth = GetComponent<IHealth>();
+            _playerHealth.ResetHealth(playerSettings.MaxHealth);
+            
+            _gun = GetComponentInChildren<IGun>();
+            _gun.Initialize();
+            
+            _playerMovement = new PlayerMovement(playerSettings, transform);
+        }
+
+        public void DisableInput()
+        {
+            if (_inputService == null) return;
+            _inputService.OnGunSwitch -= SwitchGun;
+            _inputService.OnFire -= Fire;
+            _inputService.OnGunReload -= ReloadGun;
+            _inputService.OnRotateLeft -= _playerMovement.RotateLeft;
+            _inputService.OnRotateRight -=  _playerMovement.RotateRight;
+        }
+
+        public void EnableInput()
         {
             _inputService = GetComponent<IInputService>();
-            _playerHealth = GetComponent<IHealth>();
-            _gun = GetComponentInChildren<IGun>();
-        
-            _playerMovement = new PlayerMovement(playerSettings, transform);
-            
             _inputService.OnGunSwitch += SwitchGun;
             _inputService.OnFire += Fire;
             _inputService.OnGunReload += ReloadGun;
