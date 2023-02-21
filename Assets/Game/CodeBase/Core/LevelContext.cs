@@ -34,10 +34,13 @@ namespace Game.CodeBase.Core
         private void EndGame()
         {
             _enemySpawner.StopSpawning();
+            _playerBase.DeInitialize();
             _playerBase.DisableInput();
+            _playerHud.DeInitialize();
+
+            _playerBase.PlayerHealth.OnDie -= EndGame;
             _gameOverWindow = Instantiate(_gameOverWindowPrefab);
             _gameOverWindow.OnReloadClick += LoadGame;
-            _playerBase.PlayerHealth.OnDie -= EndGame;
         }
     }
 }

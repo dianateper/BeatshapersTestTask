@@ -29,6 +29,11 @@ namespace Game.CodeBase.PlayerLogic
             _playerMovement = new PlayerMovement(playerSettings, transform);
         }
 
+        public void DeInitialize()
+        {
+            _gun.DeInitialize();
+        }
+
         public void DisableInput()
         {
             if (_inputService == null) return;

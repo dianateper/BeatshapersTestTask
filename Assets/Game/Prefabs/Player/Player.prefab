@@ -371,8 +371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSettings:
-    _rotationSpeed: 10
-    _maxHealth: 10
+    _rotationSpeed: 20
+    _maxHealth: 100
 --- !u!114 &9114116600703988324
 MonoBehaviour:
   m_ObjectHideFlags: 0

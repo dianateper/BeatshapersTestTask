@@ -25,9 +25,10 @@ namespace Game.CodeBase.Weapon.Guns
          }
 
          _currentGun = _guns[0];
+         UpdateGunRenderer();
       }
 
-      private void OnDestroy()
+      public void DeInitialize()
       {
          foreach (var gun in _guns)
          {
@@ -46,8 +47,13 @@ namespace Game.CodeBase.Weapon.Guns
          _currentGun.StopReloading();
          _currentGunIndex = (_currentGunIndex + 1) % _guns.Count;
          _currentGun = _guns[_currentGunIndex];
-         _gunRenderer.ChangeSprite(_currentGun);
+         UpdateGunRenderer();
          UpdateGunInfo();
+      }
+
+      private void UpdateGunRenderer()
+      {
+         _gunRenderer.ChangeSprite(_currentGun);
       }
 
       private void UpdateGunInfo() => OnGunInfoChange?.Invoke(this);

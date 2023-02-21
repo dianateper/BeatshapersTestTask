@@ -8,7 +8,7 @@ namespace Game.CodeBase.Weapon.Models
     {
         BFG,
         Shotgun,
-        Dual
+        DualBarrelShotgun
     }
     
     [CreateAssetMenu(fileName = "Gun", menuName = "Game/Gun")]
@@ -18,7 +18,7 @@ namespace Game.CodeBase.Weapon.Models
         [SerializeField] private Sprite _gunSprite;
         [SerializeField] private int _maxAmmo;
         [SerializeField] private BulletModel bulletModel;
-        [SerializeField] protected int _ammoPerShoot;
+        [SerializeField] protected int _bulletCountPerShoot;
         [SerializeField] private float _coolDownTime;
         [SerializeField] private float _reloadTime;
 
@@ -35,6 +35,8 @@ namespace Game.CodeBase.Weapon.Models
             get => _currentAmmo;
             private set
             {
+                if (value < 0) 
+                    _currentAmmo = 0;
                 _currentAmmo = value;
                 OnGunInfoChange?.Invoke();
             }
@@ -53,11 +55,11 @@ namespace Game.CodeBase.Weapon.Models
 
         public void Shoot(Vector3 startPosition, Vector3 direction)
         {
-            if (_canShoot && _currentAmmo - _ammoPerShoot >= 0)
+            if (_canShoot && _currentAmmo - _bulletCountPerShoot >= 0)
             {
                 _canShoot = false;
-                bulletModel.Shoot(startPosition, direction);
-                CurrentAmmo -= _ammoPerShoot;
+                bulletModel.Shoot(_bulletCountPerShoot, startPosition, direction);
+                CurrentAmmo -= _bulletCountPerShoot;
                 _monoBehaviour.StartCoroutine(StartCoolDownCoroutine());
             }
         }

@@ -27,7 +27,7 @@ namespace Game.CodeBase.EnemyLogic
 
             enemy.transform.SetPositionAndRotation(GetRandomPosition(_enemySettings.EnemySpawnRadius),
                 Quaternion.identity);
-            enemy.Construct(target, _enemySettings.EnemySpeed);   
+            enemy.Construct(target, _enemySettings);   
             return enemy;
         }
 
