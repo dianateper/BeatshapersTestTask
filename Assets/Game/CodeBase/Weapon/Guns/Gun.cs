@@ -28,6 +28,7 @@ namespace Game.CodeBase.Weapon.Guns
       
       public void ChangeGun()
       {
+         _currentGun.StopReloading();
          _currentGunIndex = (_currentGunIndex + 1) % _guns.Count;
          _currentGun = _guns[_currentGunIndex];
          _gunView.ChangeSprite(_currentGun);
