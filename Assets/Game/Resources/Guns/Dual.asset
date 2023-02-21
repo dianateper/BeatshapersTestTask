@@ -15,6 +15,7 @@ MonoBehaviour:
   _gunId: 2
   _gunSprite: {fileID: -5109511109099315614, guid: 85ff1d8a607aed242a126cd25c5485eb, type: 3}
   _maxAmmo: 100
-  _coolDown: 0.2
   bulletModel: {fileID: 11400000, guid: 756b69d298aa97b448f3f96492758f87, type: 2}
   _ammoPerShoot: 1
+  _coolDownTime: 0.1
+  _reloadTime: 3
