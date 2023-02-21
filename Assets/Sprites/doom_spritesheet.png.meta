@@ -47,6 +47,9 @@ TextureImporter:
   - first:
       213: -6102739662004259160
     second: projectile_2
+  - first:
+      213: -8129161179927744331
+    second: doom_spritesheet_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -167,8 +170,8 @@ TextureImporter:
         y: 978
         width: 90
         height: 155
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,8 +191,8 @@ TextureImporter:
         y: 978
         width: 119
         height: 155
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,8 +212,8 @@ TextureImporter:
         y: 978
         width: 79
         height: 60
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,8 +233,8 @@ TextureImporter:
         y: 978
         width: 113
         height: 155
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -440,8 +443,8 @@ TextureImporter:
         y: 845
         width: 169
         height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -470,6 +473,27 @@ TextureImporter:
       bones: []
       spriteID: 8a67c817c96be4ba0800000000000000
       internalID: -6102739662004259160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doom_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 978
+        width: 57
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0f28c1afa6f2f80800000000000000
+      internalID: -8129161179927744331
       vertices: []
       indices: 
       edges: []

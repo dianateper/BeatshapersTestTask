@@ -1,18 +1,24 @@
-﻿using Game.CodeBase.Core.Services;
+﻿using Game.CodeBase.Common;
+using Game.CodeBase.Core.Services;
+using Game.CodeBase.Weapon;
+using Game.CodeBase.Weapon.Guns;
 using UnityEngine;
 
 namespace Game.CodeBase.PlayerLogic
 {
-    public class PlayerBase : MonoBehaviour
+    public class PlayerBase : MonoBehaviour, IPlayer
     {
         [SerializeField] private PlayerMovementSettings _playerMovementSettings;
        
         private PlayerMovement _playerMovement;
         private IInputService _inputService;
+        private IGun _gun;
         
         private void Awake()
         {
-            _inputService = FindObjectOfType<UnityEngineInputService>();
+            _inputService = GetComponent<IInputService>();
+            _gun = GetComponentInChildren<IGun>();
+            
             _playerMovement = new PlayerMovement(_playerMovementSettings, transform);
             
             _inputService.OnGunSwitch += SwitchGun;
@@ -24,17 +30,25 @@ namespace Game.CodeBase.PlayerLogic
 
         private void Fire()
         {
-            
+            _gun.Shoot(transform.forward);
         }
 
         private void ReloadGun()
         {
-            
+            _gun.Reload();
         }
 
         private void SwitchGun()
         {
-            
+            _gun.ChangeGun();
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent(out IDamageable _))
+            {
+                Debug.Log("Player hit");   
+            }
         }
     }
 }
