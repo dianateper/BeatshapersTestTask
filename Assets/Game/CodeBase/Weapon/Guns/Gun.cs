@@ -15,11 +15,13 @@ namespace Game.CodeBase.Weapon.Guns
       
       private void Start()
       {
+         foreach (var gun in _guns) 
+            gun.Construct(this);
          _currentGun = _guns[0];
       }
 
       public void Shoot(Vector3 direction) => 
-         _currentGun.Shoot(_shootPosition.position, direction, this);
+         _currentGun.Shoot(_shootPosition.position, direction);
 
       public void Reload() => 
          _currentGun.ReloadAmmo();
