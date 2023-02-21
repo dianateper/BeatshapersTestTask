@@ -56,7 +56,6 @@ namespace Game.CodeBase.Weapon.Models
         public void ReloadAmmo()
         {
             _canShoot = false;
-            _monoBehaviour.StopCoroutine(ReloadAmmoCoroutine());
             _monoBehaviour.StartCoroutine(ReloadAmmoCoroutine());
         }
 
@@ -71,6 +70,12 @@ namespace Game.CodeBase.Weapon.Models
         {
             yield return _coolDownDelay;
             _canShoot = true;
+        }
+
+        public void StopReloading()
+        {
+            _canShoot = true;
+            _monoBehaviour.StopCoroutine(ReloadAmmoCoroutine());
         }
     }
 }
