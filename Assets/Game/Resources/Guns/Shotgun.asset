@@ -18,5 +18,5 @@ MonoBehaviour:
   bulletModel: {fileID: 11400000, guid: 1fda9a0dcb2a1734489d30e3e348e39b, type: 2}
   _maxAmmo: 8
   _bulletCountPerShoot: 1
-  _coolDownTime: 1
   _reloadTime: 3
+  _coolDownTime: 1

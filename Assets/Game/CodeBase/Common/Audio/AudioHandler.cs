@@ -13,6 +13,7 @@ namespace Game.CodeBase.Common.Audio
 
         public void PlayAudioClip(AudioClip audioClip)
         {
+            if (audioClip == null) return;
             _audioSource.PlayOneShot(audioClip);
         }
     }

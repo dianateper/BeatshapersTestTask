@@ -15,7 +15,7 @@ namespace Game.CodeBase.Common
         
         public T GetFromPool() 
         {
-            var result = _pooledObjets.FirstOrDefault(o => o.gameObject.activeInHierarchy);
+            var result = _pooledObjets.FirstOrDefault(o => o.gameObject.activeSelf == false);
             if (result != null)
             {
                 result.gameObject.SetActive(true);

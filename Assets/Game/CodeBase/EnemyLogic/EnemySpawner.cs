@@ -44,6 +44,7 @@ namespace Game.CodeBase.EnemyLogic
 
         private void Reclaim(Enemy enemy)
         {
+            enemy.OnReclaim -= Reclaim;
             _activeEnemies.Remove(enemy);
             _enemyFactory.Reclaim(enemy);
         }
