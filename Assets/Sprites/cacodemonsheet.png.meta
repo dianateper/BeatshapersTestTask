@@ -1,7 +1,118 @@
 fileFormatVersion: 2
 guid: f102179b9d5cc464c9113711aa7ca8cb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4397474608902079980
+    second: cacodemonsheet_0
+  - first:
+      213: -2506479457360380059
+    second: cacodemonsheet_1
+  - first:
+      213: -4039858963892586611
+    second: cacodemonsheet_2
+  - first:
+      213: 5964707591501561572
+    second: cacodemonsheet_3
+  - first:
+      213: 2558145694477956775
+    second: cacodemonsheet_4
+  - first:
+      213: 8313666971401875264
+    second: cacodemonsheet_5
+  - first:
+      213: 4181109742038513209
+    second: cacodemonsheet_6
+  - first:
+      213: 3625177735172042783
+    second: cacodemonsheet_7
+  - first:
+      213: 2635154110942727164
+    second: cacodemonsheet_8
+  - first:
+      213: -8390412736062539300
+    second: cacodemonsheet_9
+  - first:
+      213: -6432294423059761767
+    second: cacodemonsheet_10
+  - first:
+      213: -1057676303514835384
+    second: cacodemonsheet_11
+  - first:
+      213: -2257054249226603699
+    second: cacodemonsheet_12
+  - first:
+      213: 8884095139128572225
+    second: cacodemonsheet_13
+  - first:
+      213: 6582813545849746619
+    second: cacodemonsheet_14
+  - first:
+      213: 7796291370026408984
+    second: cacodemonsheet_15
+  - first:
+      213: 4591373285220733538
+    second: cacodemonsheet_16
+  - first:
+      213: -2956717906318498345
+    second: cacodemonsheet_17
+  - first:
+      213: 3152017675075365172
+    second: cacodemonsheet_18
+  - first:
+      213: 27779056372978873
+    second: cacodemonsheet_19
+  - first:
+      213: -1481341150081714649
+    second: cacodemonsheet_20
+  - first:
+      213: -9013464527561030538
+    second: cacodemonsheet_21
+  - first:
+      213: -7019743248483288295
+    second: cacodemonsheet_22
+  - first:
+      213: -7704413536268655547
+    second: cacodemonsheet_23
+  - first:
+      213: -6276345350041719885
+    second: cacodemonsheet_24
+  - first:
+      213: -15520693284058469
+    second: cacodemonsheet_25
+  - first:
+      213: -1856796967861148333
+    second: cacodemonsheet_26
+  - first:
+      213: 4517593303073599482
+    second: cacodemonsheet_27
+  - first:
+      213: 8773309217652066318
+    second: cacodemonsheet_28
+  - first:
+      213: 6811041993324395253
+    second: cacodemonsheet_29
+  - first:
+      213: -1535892722227302516
+    second: cacodemonsheet_30
+  - first:
+      213: -1861452103331114858
+    second: cacodemonsheet_31
+  - first:
+      213: -7597409489116807265
+    second: cacodemonsheet_32
+  - first:
+      213: -5464311577724902662
+    second: cacodemonsheet_33
+  - first:
+      213: 5123282811913522783
+    second: cacodemonsheet_34
+  - first:
+      213: -4244389267091243978
+    second: cacodemonsheet_35
+  - first:
+      213: -2329867866611930043
+    second: cacodemonsheet_36
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,11 +224,788 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: cacodemonsheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a779b542809f2c0800000000000000
+      internalID: -4397474608902079980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 368
+        width: 61
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f7833a632373dd0800000000000000
+      internalID: -2506479457360380059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 367
+        width: 62
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87318a2da98fe7c0800000000000000
+      internalID: -4039858963892586611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 367
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eeb68cb3f5e6c250800000000000000
+      internalID: 5964707591501561572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 369
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6bd0b94fb508320800000000000000
+      internalID: 2558145694477956775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 369
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f6e431014106370800000000000000
+      internalID: 8313666971401875264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_6
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 368
+        width: 61
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936712d6829460a30800000000000000
+      internalID: 4181109742038513209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 62
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10b59071f73f4230800000000000000
+      internalID: 3625177735172042783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_8
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 290
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfbc627c3b2f19420800000000000000
+      internalID: 2635154110942727164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_9
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 290
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9341422144f8b80800000000000000
+      internalID: -8390412736062539300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_10
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 290
+        width: 63
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995fbce4d46ebb6a0800000000000000
+      internalID: -6432294423059761767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_11
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 290
+        width: 60
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84666a971016251f0800000000000000
+      internalID: -1057676303514835384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_12
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 290
+        width: 62
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43ff046e155da0e0800000000000000
+      internalID: -2257054249226603699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 218
+        width: 63
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14978868575aa4b70800000000000000
+      internalID: 8884095139128572225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_14
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 218
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4f00fea0ada5b50800000000000000
+      internalID: 6582813545849746619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_15
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 218
+        width: 63
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c1edbc1bdf13c60800000000000000
+      internalID: 7796291370026408984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_16
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 218
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262dcc04da5d7bf30800000000000000
+      internalID: 4591373285220733538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_17
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 215
+        width: 62
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d569d4cab0a7f6d0800000000000000
+      internalID: -2956717906318498345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_18
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 218
+        width: 63
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439ae9810673ebb20800000000000000
+      internalID: 3152017675075365172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 63
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b49e4397e0b26000800000000000000
+      internalID: 27779056372978873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_20
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 146
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726f53e8218317be0800000000000000
+      internalID: -1481341150081714649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_21
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 146
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674042f74cdb9e280800000000000000
+      internalID: -9013464527561030538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_22
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 146
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bf4bb25bcd49e90800000000000000
+      internalID: -7019743248483288295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_23
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 146
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544eeff55bc641590800000000000000
+      internalID: -7704413536268655547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_24
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 146
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bba61b5821f5e8a0800000000000000
+      internalID: -6276345350041719885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ac22ef20cd8cff0800000000000000
+      internalID: -15520693284058469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_26
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 74
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3552d96def45b36e0800000000000000
+      internalID: -1856796967861148333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_27
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 76
+        width: 62
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affa2658c27b1be30800000000000000
+      internalID: 4517593303073599482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_28
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 74
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08cfce104e01c970800000000000000
+      internalID: 8773309217652066318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_29
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 74
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa7e524b9ea58e50800000000000000
+      internalID: 6811041993324395253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_30
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 74
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fa886e4b96faae0800000000000000
+      internalID: -1535892722227302516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6909b86ac2bca26e0800000000000000
+      internalID: -1861452103331114858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_32
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 2
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fb20c8254909690800000000000000
+      internalID: -7597409489116807265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_33
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 0
+        width: 65
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af227ab329dda24b0800000000000000
+      internalID: -5464311577724902662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_34
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 56
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e48f7b29e891740800000000000000
+      internalID: 5123282811913522783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_35
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 2
+        width: 69
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cbb860376e815c0800000000000000
+      internalID: -4244389267091243978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cacodemonsheet_36
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 2
+        width: 75
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54caffcf485aaafd0800000000000000
+      internalID: -2329867866611930043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: eecbb83ed68842e48a52251863939d19
     internalID: 0
     vertices: []
     indices: 

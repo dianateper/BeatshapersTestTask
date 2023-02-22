@@ -1,5 +1,5 @@
 ﻿using System;
-using Game.CodeBase.Common;
+using Game.CodeBase.Common.HealthSystem;
 using UnityEngine;
 
 namespace Game.CodeBase.PlayerLogic
@@ -7,7 +7,6 @@ namespace Game.CodeBase.PlayerLogic
     public class PlayerHealth : MonoBehaviour, IHealth
     {
         private float _currentHealth;
-        public float MaxHealth { get; set; }
         public float CurrentHealth => _currentHealth;
         public event Action OnCurrentHealthChange;
         public event Action OnDie;
@@ -15,7 +14,6 @@ namespace Game.CodeBase.PlayerLogic
         public void ResetHealth(float maxHealth)
         {
             _currentHealth = maxHealth;
-            MaxHealth = maxHealth;
             OnCurrentHealthChange?.Invoke();
         }
         

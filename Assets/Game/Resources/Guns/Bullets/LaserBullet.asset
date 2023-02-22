@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a9e289f6eb4c5db6743c64de9e3868, type: 3}
   m_Name: LaserBullet
   m_EditorClassIdentifier: 
-  _ammoPerShoot: 1
-  _damage: 1
-  _lasetDistance: 30
+  _laserDistance: 30

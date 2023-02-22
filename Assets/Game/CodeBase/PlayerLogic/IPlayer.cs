@@ -1,4 +1,4 @@
-﻿using Game.CodeBase.Common;
+﻿using Game.CodeBase.Common.HealthSystem;
 using Game.CodeBase.Core.Services;
 using Game.CodeBase.Weapon.Guns;
 

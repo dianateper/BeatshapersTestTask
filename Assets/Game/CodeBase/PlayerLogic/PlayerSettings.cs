@@ -7,7 +7,7 @@ namespace Game.CodeBase.PlayerLogic
     public class PlayerSettings
     {
         [SerializeField] private float _rotationSpeed = 10;
-        [SerializeField] private float _maxHealth = 10;
+        [SerializeField] private float _maxHealth = 100;
       
         public float RotationSpeed => _rotationSpeed;
         public float MaxHealth => _maxHealth;

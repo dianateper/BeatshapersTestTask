@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Game.CodeBase.Common
+namespace Game.CodeBase.Common.HealthSystem
 {
     public interface IHealth : IDamageable
     {

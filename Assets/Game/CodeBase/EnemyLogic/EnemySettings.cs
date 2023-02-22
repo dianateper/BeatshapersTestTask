@@ -9,8 +9,10 @@ namespace Game.CodeBase.EnemyLogic
         [SerializeField] private float _enemySpawnRadius;
         [SerializeField] private float _enemySpeed;
         [SerializeField] private float _damage;
+        [SerializeField] private float _offsetY;
         
         public float EnemySpawnRadius => _enemySpawnRadius;
+        public float OffsetY => _offsetY;
         public float EnemySpeed => _enemySpeed;
         public float Damage => _damage;
     }

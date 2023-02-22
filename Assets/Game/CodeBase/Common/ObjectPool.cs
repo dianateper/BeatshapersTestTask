@@ -6,20 +6,20 @@ namespace Game.CodeBase.Common
 {
     public class ObjectPool<T> where T: MonoBehaviour
     {
-        private List<T> pooledObjets;
+        private List<T> _pooledObjets;
 
         public ObjectPool()
         {
-            pooledObjets = new List<T>();
+            _pooledObjets = new List<T>();
         }
         
         public T GetFromPool() 
         {
-            var result = pooledObjets.FirstOrDefault(o => o.gameObject.activeInHierarchy);
+            var result = _pooledObjets.FirstOrDefault(o => o.gameObject.activeInHierarchy);
             if (result != null)
             {
                 result.gameObject.SetActive(true);
-                pooledObjets.Remove(result);
+                _pooledObjets.Remove(result);
             }
             return result;
         }
@@ -27,7 +27,7 @@ namespace Game.CodeBase.Common
         public void ReturnToPool(T objectToReturn) 
         {
             objectToReturn.gameObject.SetActive(false);
-            pooledObjets.Add(objectToReturn);
+            _pooledObjets.Add(objectToReturn);
         }
     }
 }

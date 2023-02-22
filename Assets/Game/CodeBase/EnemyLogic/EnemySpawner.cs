@@ -13,8 +13,6 @@ namespace Game.CodeBase.EnemyLogic
         private WaitForSeconds _spawnDelay;
         private List<Enemy> _activeEnemies;
         
-        private bool _isSpawning;
-
         public void Construct(Transform playerBaseTransform)
         {
             _activeEnemies = new List<Enemy>();
@@ -24,7 +22,6 @@ namespace Game.CodeBase.EnemyLogic
 
         public void StartSpawning()
         {
-            _isSpawning = true;
             StartCoroutine(CreateEnemy());
         }
 
@@ -32,12 +29,11 @@ namespace Game.CodeBase.EnemyLogic
         {
             StopCoroutine(CreateEnemy());
             _enemyFactory.ReclaimAll(_activeEnemies);
-            _isSpawning = false;
         }
 
         private IEnumerator CreateEnemy()
         {
-            while (_isSpawning)
+            while (true)
             {
                 var enemy = _enemyFactory.CreateEnemy(_target);
                 _activeEnemies.Add(enemy);

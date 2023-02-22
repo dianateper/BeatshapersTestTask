@@ -25,7 +25,7 @@ namespace Game.CodeBase.EnemyLogic
                 enemy = Instantiate(_enemyPrefab);
             }
 
-            enemy.transform.SetPositionAndRotation(GetRandomPosition(_enemySettings.EnemySpawnRadius),
+            enemy.transform.SetPositionAndRotation(GetRandomPosition(_enemySettings.EnemySpawnRadius, _enemySettings.OffsetY),
                 Quaternion.identity);
             enemy.Construct(target, _enemySettings);   
             return enemy;
@@ -36,19 +36,19 @@ namespace Game.CodeBase.EnemyLogic
             _enemies.ReturnToPool(enemy);
         }
 
-        private Vector3 GetRandomPosition(float radius)
-        {
-            var position = Random.onUnitSphere * radius;
-            position.y = -1;
-            return position;
-        }
-
         public void ReclaimAll(List<Enemy> activeEnemies)
         {
             foreach (var enemy in activeEnemies)
             {
                 Reclaim(enemy);
             }
+        }
+
+        private Vector3 GetRandomPosition(float radius, float offsetY)
+        {
+            var position = Random.onUnitSphere * radius;
+            position.y = offsetY;
+            return position;
         }
     }
 }

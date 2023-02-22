@@ -9,8 +9,8 @@ namespace Game.CodeBase.Weapon.Bullets
     {
         private Rigidbody _rigidbody;
         private BulletFactory _bulletFactory;
-        private float _speed;
         private WaitForSeconds _returnToPoolDelay;
+        private float _speed;
 
         public void Construct(BulletFactory bulletFactory, float lifeTime, float speed)
         {

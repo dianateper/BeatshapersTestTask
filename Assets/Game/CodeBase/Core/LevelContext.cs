@@ -11,7 +11,7 @@ namespace Game.CodeBase.Core
         [SerializeField] private PlayerHud _playerHud;
         [SerializeField] private EnemySpawner _enemySpawner;
         [SerializeField] private GameOverWindow _gameOverWindowPrefab;
-
+     
         private GameOverWindow _gameOverWindow;
         
         private void Awake()

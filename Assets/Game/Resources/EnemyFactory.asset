@@ -17,3 +17,4 @@ MonoBehaviour:
     _enemySpawnRadius: 30
     _enemySpeed: 5
     _damage: 1
+    _offsetY: -1

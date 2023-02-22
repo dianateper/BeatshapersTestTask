@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using UnityEngine;
 
 namespace Game.CodeBase.Weapon.Models
@@ -16,27 +15,32 @@ namespace Game.CodeBase.Weapon.Models
     {
         [SerializeField] private GunId _gunId;
         [SerializeField] private Sprite _gunSprite;
-        [SerializeField] private int _maxAmmo;
+        [SerializeField] private AudioClip _audioClip;
         [SerializeField] private BulletModel bulletModel;
-        [SerializeField] protected int _bulletCountPerShoot;
-        [SerializeField] private float _coolDownTime;
+        [SerializeField] private int _maxAmmo;
+        [SerializeField] private int _bulletCountPerShoot;
         [SerializeField] private float _reloadTime;
-
-        private bool _canShoot = true;
-        private int _currentAmmo;
-        private MonoBehaviour _monoBehaviour;
-        private WaitForSeconds _coolDownDelay;
-        private WaitForSeconds _reloadDelay;
+        [SerializeField] private float _coolDownTime;
         
+        private int _currentAmmo;
+        
+        public int MaxAmmo => _maxAmmo;
+        public float ReloadTime => _reloadTime;
+        public float CoolDownTime => _coolDownTime;
         public Sprite Sprite => _gunSprite;
+        public AudioClip AudioClip => _audioClip;
         
         public int CurrentAmmo
         {
             get => _currentAmmo;
-            private set
+            set
             {
+                if (_currentAmmo == value) 
+                    return;
+                
                 if (value < 0) 
                     _currentAmmo = 0;
+                
                 _currentAmmo = value;
                 OnGunInfoChange?.Invoke();
             }
@@ -44,49 +48,21 @@ namespace Game.CodeBase.Weapon.Models
 
         public event Action OnGunInfoChange;
 
-        public void Construct(MonoBehaviour monoBehaviour)
+        public void Construct()
         {
             CurrentAmmo = _maxAmmo;
-            _canShoot = true;
-            _monoBehaviour = monoBehaviour;
-            _coolDownDelay = new WaitForSeconds(_coolDownTime);
-            _reloadDelay = new WaitForSeconds(_reloadTime);
         }
 
-        public void Shoot(Vector3 startPosition, Vector3 direction)
+        public bool TryShoot(Vector3 startPosition, Vector3 direction)
         {
-            if (_canShoot && _currentAmmo - _bulletCountPerShoot >= 0)
+            if (_currentAmmo - _bulletCountPerShoot >= 0)
             {
-                _canShoot = false;
                 bulletModel.Shoot(_bulletCountPerShoot, startPosition, direction);
                 CurrentAmmo -= _bulletCountPerShoot;
-                _monoBehaviour.StartCoroutine(StartCoolDownCoroutine());
+                return true;
             }
-        }
 
-        public void ReloadAmmo()
-        {
-            _canShoot = false;
-            _monoBehaviour.StartCoroutine(ReloadAmmoCoroutine());
-        }
-
-        private IEnumerator ReloadAmmoCoroutine()
-        {
-            yield return _reloadDelay;
-            CurrentAmmo = _maxAmmo;
-            _canShoot = true;
-        }
-
-        private IEnumerator StartCoolDownCoroutine()
-        {
-            yield return _coolDownDelay;
-            _canShoot = true;
-        }
-
-        public void StopReloading()
-        {
-            _canShoot = true;
-            _monoBehaviour.StopCoroutine(ReloadAmmoCoroutine());
+            return false;
         }
     }
 }

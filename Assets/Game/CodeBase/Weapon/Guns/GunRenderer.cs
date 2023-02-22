@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Game.CodeBase.Weapon.Guns
 {
-    public class GunRenderer : MonoBehaviour
+    public class GunRenderer : MonoBehaviour, IGunRenderer
     {
         [SerializeField] private SpriteRenderer _gunRenderer;
 
-        public void ChangeSprite(GunModel gunsModel)
+        public void UpdateGunRenderer(GunModel gunModel)
         {
-            _gunRenderer.sprite = gunsModel.Sprite;
+            _gunRenderer.sprite = gunModel.Sprite;
         }
     }
 }

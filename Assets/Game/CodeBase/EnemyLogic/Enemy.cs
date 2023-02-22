@@ -1,11 +1,11 @@
 ﻿using System;
-using Game.CodeBase.Common;
+using Game.CodeBase.Common.HealthSystem;
 using Game.CodeBase.Weapon.Bullets;
 using UnityEngine;
 
 namespace Game.CodeBase.EnemyLogic
 {
-    public class Enemy : MonoBehaviour, IDamageable, IEnemy
+    public class Enemy : MonoBehaviour, IEnemy
     {
         private Transform _target;
         private Vector3 _direction;
@@ -31,11 +31,6 @@ namespace Game.CodeBase.EnemyLogic
             transform.LookAt(_target);
         }
 
-        public void TakeDamage(float damage)
-        {
-            OnReclaim?.Invoke(this);
-        }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out IDamageable damageable))
@@ -51,6 +46,11 @@ namespace Game.CodeBase.EnemyLogic
             {
                 OnReclaim?.Invoke(this);
             }
+        }
+
+        public void TakeDamage(float damage)
+        {
+            OnReclaim?.Invoke(this);
         }
     }
 }
